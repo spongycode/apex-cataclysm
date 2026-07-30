@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX // CATACLYSM CANYON</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🏁</text></svg>" />
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0a0608; }
+    #game-canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+    #ui-root { position: fixed; inset: 0; pointer-events: none; z-index: 10; }
+    #loading {
+      position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px;
+      background: radial-gradient(120% 90% at 50% 30%, #1a0d14 0%, #060305 70%);
+      font-family: 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif; color: #fff;
+      transition: opacity 0.6s ease; user-select: none;
+    }
+    #loading.done { opacity: 0; pointer-events: none; }
+    #loading .logo {
+      font-size: clamp(28px, 5vw, 64px); font-weight: 900; font-stretch: condensed;
+      letter-spacing: 0.12em; font-style: italic;
+      background: linear-gradient(100deg, #ff2d78 10%, #ff9a3d 60%, #ffe14d 95%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 24px rgba(255, 45, 120, 0.35));
+    }
+    #loading .bar { width: min(420px, 70vw); height: 4px; background: rgba(255,255,255,0.12); overflow: hidden; transform: skewX(-20deg); }
+    #loading .bar i { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, #ff2d78, #ff9a3d); transition: width 0.25s ease; }
+    #loading .label { font-size: 13px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    #fatal {
+      position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center;
+      background: #14060b; color: #ffb3c9; font-family: monospace; font-size: 14px; padding: 40px; white-space: pre-wrap;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/",
+        "three-mesh-bvh": "./node_modules/three-mesh-bvh/build/index.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="ui-root"></div>
+  <div id="loading">
+    <div class="logo">APEX // CATACLYSM CANYON</div>
+    <div class="bar"><i id="load-fill"></i></div>
+    <div class="label" id="load-label">IGNITION</div>
+  </div>
+  <div id="fatal"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

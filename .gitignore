@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# QA test outputs & logs
+qa/out/
+*.log
+
+# OS & System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories & files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / local configs
+.env
+.env.*
+!.env.example

@@ -1,0 +1,56 @@
+import * as THREE from 'three';
+
+export function createState() {
+  return {
+    phase: 'loading', // 'loading'|'menu'|'countdown'|'racing'|'finished'
+    countdown: 3,
+    raceTime: 0,
+    progress: 0,
+    checkpoint: 0,
+    checkpointTotal: 12,
+    racePosition: 4,
+    wrongWay: false,
+    timeScale: 1,
+    stats: { topSpeedKmh: 0, driftScore: 0, airTime: 0, propsBroken: 0 },
+    car: {
+      position: new THREE.Vector3(),
+      quaternion: new THREE.Quaternion(),
+      velocity: new THREE.Vector3(),
+      speedKmh: 0,
+      rpm: 0,
+      gear: 1,
+      steer: 0,
+      throttle: 0,
+      brake: 0,
+      grounded: true,
+      airborne: false,
+      airTime: 0,
+      drifting: false,
+      driftAngle: 0,
+      boost: 1,
+      boosting: false,
+      surface: 'asphalt',
+      wheels: [0, 1, 2, 3].map(() => ({
+        worldPos: new THREE.Vector3(),
+        radius: 0.34,
+        spinAngle: 0,
+        steerAngle: 0,
+        compression: 0.5,
+        contact: true,
+        slip: 0,
+        normal: new THREE.Vector3(0, 1, 0),
+      })),
+      localAccel: new THREE.Vector3(),
+    },
+    weather: {
+      rain: 0,
+      wetness: 0,
+      fog: 0.35,
+      lightning: 0,
+      sunset: 0,
+      windX: 0,
+      windZ: 0,
+    },
+    settings: { quality: 'high', mute: false, cameraMode: 0 },
+  };
+}

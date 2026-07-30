@@ -1,0 +1,11 @@
+Build a AAA-quality racing game in Three.js inspired by Forza Horizon 5, Need for Speed Unbound, and The Crew Motorfest. Focus on one incredible showcase track only—do not build multiple tracks or an open world. Put all effort into making this single race unforgettable.
+
+The track should be packed with cinematic moments: huge jumps where the car flies through the air, giant ramps, loops, banked turns, drifting sections, tunnels, bridges, cliff roads, forests, deserts, water crossings, collapsing roads, breakable objects, explosions, rockslides, falling debris, moving obstacles, dynamic weather, particle effects, and an epic finish.
+
+The car should have AAA handling with realistic suspension, drifting, weight transfer, boost, motion blur, dynamic camera, satisfying engine sounds, and polished controls.
+
+Use modern Three.js techniques (PBR materials, HDR lighting, post-processing, shadows, reflections, particles, LODs, instancing, and performance optimizations) to achieve the highest visual quality possible.
+
+Fan out specialized sub-agents for rendering, physics, track design, VFX, lighting, audio, AI, optimization, UI, and QA. Give each subsystem a separate AAA quality critic that ruthlessly compares it against Forza Horizon 5, Need for Speed Unbound, and The Crew Motorfest. If any subsystem falls short, /loop until it reaches AAA quality.
+
+Keep iterating and polishing every detail until the entire experience feels like a modern AAA racing game demo, prioritizing quality over quantity. The goal is to make players constantly say "Wow!" while maintaining smooth performance.
