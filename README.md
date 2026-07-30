@@ -1,5 +1,7 @@
 # APEX // CATACLYSM CANYON
 
+🎮 **[Play Live Demo](https://claude-race.vercel.app/)**
+
 An AAA arcade-racing showcase in the browser built with Three.js r170 and WebGL2. A 2.5-minute point-to-point canyon sprint (~8 km) featuring 4 rival cars, scripted disaster set-pieces, dynamic weather transitions, and 120 Hz vehicle physics.
 
 **There are zero art assets.** Every texture, car mesh, canyon rock wall, environment, and audio sound effect is procedurally synthesized at load time from pure JavaScript. No GLTF models, no image textures, no HDRIs, no audio samples. The only runtime dependency is `three` (and `three-mesh-bvh`).
